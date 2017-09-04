@@ -2,16 +2,13 @@
 
 <?php
 //Create Topic object
-$topic = new Topic();
+$post = new Post;
 
 //Get Template & Assign Vars
 $template = new Template('templates/frontpage.php');
 
-
 //Assign Vars
-$template->topics = $topic->getAllTopics();
-$template->totalUsers = $topic->getTotalUsers();
-$template->totalTopics = $topic->getTotalTopics();
-$template->totalCategories = $topic->getTotalCategories();
+$template->posts = $post->getCategoryId();
+//$template->category = $post->getAllCategories();
 
 echo $template;
